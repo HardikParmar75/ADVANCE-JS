@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="lo1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore eum error, velit mollitia dicta qui sint reprehenderit odio inventore nostrum quae impedit maxime a ab minus deserunt quam delectus atque.</div>
+    <button id="btn1">click me</button>
+
+    <script>
+        "use strict"
+        //strict mode doesnot allows declarations without var/const/let
+        var txt1 = document.getElementById('lo1');
+        var btn_tag = document.getElementById('btn1');
+        function changetxt(){
+            txt1.style.color="red"
+        }
+        btn_tag.addEventListener('click',changetxt)
+    </script>
+</body>
+</html>

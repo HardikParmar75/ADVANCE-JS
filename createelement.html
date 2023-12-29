@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dada">
+        <div class="child1">child 1</div>
+        <div class="child2">child 2</div>
+        <div class="child3">child 3</div>
+    </div>
+
+    <script>
+        main_div = document.querySelector('.dada');
+        n_tag = document.createElement('h1');
+        n_txt = document.createTextNode('hello');
+        n_tag.append(n_txt);
+        main_div.append(n_tag);
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .x{
+            height: 100px;
+            width: 100px;
+            border: 2px solid;
+        }
+        .i{
+            height: 100px;
+            width: 100px;
+            border: 2px solid;
+        }
+        .j{
+            background: url(i1.jpg);
+            background-size: cover;
+        }
+        .c{
+            background-color: grey;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="x" id="a">hello</div>
+    <button onclick="cli1()">add css</button>
+    <br>
+    <br>
+    <button onclick="cli2()">remove css</button>
+    <br>
+    <br>
+    <button onclick="cli3()">toggle css</button>
+    <br>
+    <br>
+    <br>
+    <div class="i" id="i">
+        
+    </div>
+    <br>
+    <div class="x">
+        <img src="i3.jpg" alt="">
+    </div>
+    <br>
+    <br>
+    <div class="x">
+        <img src="i4.jpg" alt="">
+    </div>
+    <br>
+    <button onclick="ch1()">add img</button>
+    <br>
+    <br>
+    <button onclick="ch2()">remove img</button>
+    <br>
+    <br>
+    <button onclick="ch3()">change 1-2 2-1</button>
+
+    <script>
+        var a_tag= document.getElementById('a')
+        function cli1(){
+            a_tag.classList.add('c')
+        }
+
+        function cli2(){
+            a_tag.classList.remove('c')
+        }
+
+        function cli3(){
+            a_tag.classList.toggle('c')
+        }
+
+
+        var img = document.getElementById('i');
+        function ch1(){
+            img.classList.add('j')
+        }
+
+        function ch2(){
+            img.classList.remove('j')
+        }
+
+    </script>
+</body>
+</html>

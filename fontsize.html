@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h1 {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h1">hi</h1>
+    <h1>hi</h1>
+    <h1 class="h1">hi</h1>
+    <h1>hi</h1>
+    <h1 class="h1">hi</h1>
+    <h1>hi</h1>
+    <br>
+    <button onclick="oncli()">show
+    </button>
+    <button onclick="onbod()">hide</button>
+
+
+
+</body>
+<script>
+    h1 = document.getElementsByClassName('h1');
+    function oncli() {
+        for (i = 0; i < h1.length; i++) {
+            h1[i].style.visibility = "visible";
+            h1[i].style.transform = "translate(100px)";
+            h1[i].style.transition = ".31s"
+            h1[i].style.color = "blue"
+        }
+    }
+
+    function onbod() {
+        for (i = 0; i < h1.length; i++) {
+            {
+                h1[i].style.transform = "translate(0px)";
+                h1[i].style.transition = ".31s"
+
+                h1[i].style.visibility = "hidden"
+            }
+        }
+    }
+</script>
+
+</html>

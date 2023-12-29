@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="count123"></h1>
+    <script>
+        h1_tag = document.getElementById('count123');
+        x=0
+        function countnum(){
+            if(x<=101){
+                h1_tag.innerHTML=x++;
+            }
+            setTimeout(countnum,10) //it is written always inside function to regular interval
+        }
+       countnum();
+       //setInterval(countnum,100) it is used always out of function bcz when we write in function as recursion it prints data unregulary
+    </script>
+</body>
+</html>

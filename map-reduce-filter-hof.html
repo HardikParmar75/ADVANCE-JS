@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1,"hello","hardik"]
+        const arr2 = [1,2,3,4,5]
+        const h1 = arr.forEach((v,i,arr)=>
+        {
+            return (v);
+        })
+        console.log(h1)
+
+
+        /*forEach((value,index,wholearray)=>
+        {
+            console.log(v,i,arr);
+        })*/
+
+        // for solving these type of error we use map instead forEach
+        /*const h1 = arr.forEach((v,i,arr)=>
+        {
+            return (v);
+        })
+        console.log(h1)*/
+        
+        const h2 = arr.map((v)=>
+        {
+            return (v);
+        })
+        console.log(h2);
+
+        const h3 = arr2.map((v)=>
+        {
+            return (v * Math.PI);
+        })
+        console.log(h3);
+
+        // we can also perform logical operations in map
+
+        // for conditional usage we use filter
+        const h4 = arr2.filter((v)=>
+        {
+            return (v%2==0);
+        })
+        console.log(h4);
+
+        //reduce gives first value as current value and second value as next
+        const h5 = arr2.reduce((current,next)=>
+        {
+            return (current);
+        })
+        console.log(h5);
+
+        str = "Hello Jaydeep How Are You..!";
+
+       const data =  str.split(" ").map((v)=>{
+            return v[0]
+        }).join(" * ")
+
+        console.log(data)
+
+
+        
+    </script>
+</body>
+</html>

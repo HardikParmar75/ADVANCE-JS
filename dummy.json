@@ -1,3 +1,22 @@
-{
-    "name":"hardik"
-}
+[
+    {
+        "name":"hardik",
+        "id":51,
+        "course":"wd1"
+    },
+    {
+        "name":"rhea",
+        "id":52,
+        "course":"wd2"
+    },
+    {
+        "name":"sakshee",
+        "id":53,
+        "course":"wd3"
+    },
+    {
+        "name":"zeel",
+        "id":54,
+        "course":"wd4"
+    }
+]

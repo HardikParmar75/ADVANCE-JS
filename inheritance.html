@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class father{
+            paisa(){
+                var rs = 200
+                document.write(rs + "<br>")
+            }
+        }
+        class mother{
+            paisa1(){
+                var rs1 = 200
+                document.write(rs1)
+            }
+        }
+        class son extends father{
+    
+        }
+        class daughter extends mother{
+            
+        }
+        var account1 = new son
+        account1.paisa()
+
+        var account2 = new daughter
+        account2.paisa1();
+
+    </script>
+</body>
+</html>

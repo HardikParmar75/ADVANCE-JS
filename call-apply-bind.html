@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        students = {
+            "display":function (){
+                return this.name + " " + this.age;
+            }
+        }
+        student1 = {
+            "name":"hardik",
+            "age":19
+        }
+        student2 = {
+            "name":"rhea",
+            "age":18
+        }
+        console.log(students.display.call(student1))
+        console.log(students.display.call(student2))
+
+        console.log(students.display.apply(student1))
+        console.log(students.display.apply(student2))
+
+        console.log(students.display.bind(student1))
+        console.log(students.display.bind(student2))
+
+        var d1 = students.display.bind(student1);
+        var d2 = students.display.bind(student2);
+
+        console.log(d1() + " " + d2());
+    </script>
+</body>
+</html>

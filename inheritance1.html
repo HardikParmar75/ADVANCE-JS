@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    var a = 400
+    class father{
+        paisa(){
+            document.write(a-350 + `<br>`);
+        }
+    }
+    class mother extends father{
+        paisa1(){
+            document.write(a-200 + `<br>`);
+        }
+    }
+    class daughter extends mother{
+        paisa2(){
+            document.write(a-300 + `<br>`);
+        }
+    }
+    class son extends mother{
+        paisa3(){
+            document.write(a-350 + `<br>`);
+        }
+    }
+    var obj1 = new mother;
+    obj1.paisa();
+    obj1.paisa1();
+    var obj2 = new daughter;
+    obj2.paisa2();
+    var obj3 = new son;
+    obj3.paisa3();
+   </script> 
+</body>
+</html>

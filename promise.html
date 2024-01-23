@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const p = new Promise((r,e)=>{
+            return r("hello!")
+        })
+        p.then(
+            (res)=>{console.log(res)},
+            (err)=>{console.log(err)}
+        )
+         
+        const mypromise = new Promise((res,err)=>{
+            var x="hello";
+            if(x){
+                return res("connected!");
+            }
+            else{
+                return err("not connected");
+            }
+        })
+        mypromise.then(
+            (res)=>{console.log(res)},
+            (err)=>{console.log(err)}
+        )
+
+        function xyz(test){
+            console.log(test);
+        }
+        const mypromise1 = new Promise((res,err)=>{
+            var x="hello";
+            if(x){
+                return res("connected!");
+            }
+            else{
+                return err("not connected");
+            }
+        })
+        mypromise1.then(
+            (res)=>{xyz(res)},
+            (err)=>{xyz(err)}
+        )
+    </script>
+</body>
+</html>

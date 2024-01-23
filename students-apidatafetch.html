@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h11"></h1>
+    <script>
+        fetch('dummy.json')
+        .then((res)=>{
+            return res.json()
+        })
+        .then((data)=>{
+            // console.log(data)
+            p = `<h1>json data</h1>
+            <table border=1>
+                    <tr>
+                        <td>
+                            name
+                        </td>
+                        <td>
+                            id
+                        </td>
+                        <td>
+                            course
+                        </td>
+                    </tr>
+            `
+            data.map((v)=>{
+                p = p + `
+                    <tr>
+                        <td>
+                            ${v.name}
+                        </td>
+                        <td>
+                            ${v.id}
+                        </td>
+                        <td>
+                            ${v.course}
+                        </td>
+                    </tr>
+                `
+            })
+            document.getElementById('h11').innerHTML=p + `</table>`
+        })
+    </script>
+</body>
+</html>

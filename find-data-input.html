@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="inp1" oninput="search()" >
+    <h1 id="txt1"></h1>
+    <script>
+        var text1 = document.getElementById('txt1')
+        function data1(data) {
+            
+                        h = `<table border=2>
+                    <tr>
+                        <th>Name</th>
+                        </tr>
+                    `;
+                        data.forEach((v) => {
+                            h += `<tr>
+                        <td>${v.name}</td>
+                        </tr>`
+
+                        });
+                        h += `</table>`;
+                        text1.innerHTML = h;
+                    
+        };
+        function search(){
+            var input1 = document.getElementById('inp1').value.toLowerCase();
+            fetch('students.json')
+                .then(
+                    (res) => {
+                        return res.json()
+                    }
+                )
+                .then(
+                    (data) => {
+                        var filtereddata = data.filter((v)=> v.name.toLowerCase().includes(input1));
+                        data1(filtereddata)
+                    })
+            
+        }
+    </script>
+</body>
+
+</html>

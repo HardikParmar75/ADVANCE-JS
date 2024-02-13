@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .he1{
+            height: 50px;
+            width: 50px;
+            background-color: blue;
+            position: absolute;
+            top:-25px;
+            left: -25px;
+            border-radius: 50%;
+            box-shadow: 0 20px 15px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="he1"></div>
+    <script>
+        var d1 = document.querySelector('.he1')
+        function test(e){
+            d1.style.marginLeft=e.clientX + "px";
+            d1.style.marginTop= e.clientY + "px"
+        }
+        window.addEventListener("mousemove",test)
+    </script>
+</body>
+</html>
